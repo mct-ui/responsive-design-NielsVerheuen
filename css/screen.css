@@ -349,6 +349,33 @@ a:visited, a:active, a:hover, a:focus {
     padding: 0;
 }
 
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.o-section+.o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg+.o-section--lg, .o-section--xl+.o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl+.o-section--xl {
+        margin-top: 72px;
+    }
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
